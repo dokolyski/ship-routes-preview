@@ -1,7 +1,8 @@
-import { AsyncPipe } from '@angular/common';
+import { JsonPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  computed,
   inject,
   signal,
 } from '@angular/core';
@@ -11,25 +12,59 @@ import {
   ShipRoutesApiService,
 } from '@marcura-test/data-access-ship-routes';
 import { UiMapComponent } from '@marcura-test/ui-map';
-import { shareReplay, tap } from 'rxjs';
+import { UiRouteSelectionComponent } from '@marcura-test/ui-route-selection';
+import { shareReplay } from 'rxjs';
+import {
+  ShipVelocityPoint,
+  UiShipVelocityChartComponent,
+} from '@marcura-test/ui-ship-velocity-chart';
 
 @Component({
-  selector: 'feature-map',
+  selector: 'marcura-feature-map',
   standalone: true,
   templateUrl: './feature-map.component.html',
   styleUrl: './feature-map.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [UiMapComponent, AsyncPipe],
+  imports: [
+    UiMapComponent,
+    UiRouteSelectionComponent,
+    JsonPipe,
+    UiShipVelocityChartComponent,
+  ],
 })
 export class FeatureMapComponent {
   readonly allShipRoutes = toSignal(
-    inject(ShipRoutesApiService)
-      .getShipRoutesFromCSV()
-      .pipe(
-        shareReplay(1),
-        tap((a) => this.selectedShipRoute.set(a[1]))
-      )
+    inject(ShipRoutesApiService).getShipRoutesFromCSV().pipe(shareReplay(1)),
+    { initialValue: [] }
+  );
+  readonly allShipRoutesSelectOption = computed(() =>
+    this.allShipRoutes().map((route) => ({
+      from: route.fromPort,
+      to: route.toPort,
+      id: route.routeId,
+      durationInMs: +route.durationInMs,
+      routeStartDate: +route.points[0].timestamp,
+    }))
   );
 
   readonly selectedShipRoute = signal(null as null | ShipRoute);
+  readonly highlightedShipRoute = signal(null as null | ShipRoute);
+  readonly shipRouteData = computed(() =>
+    this.selectedShipRoute()?.points.map((point) => ({
+      knotsSpeed: point.knotsSpeed,
+      timestamp: point.timestamp,
+    }))
+  );
+
+  routeSelected(routeId: string | null) {
+    this.selectedShipRoute.set(
+      this.allShipRoutes().find((route) => route.routeId === routeId) || null
+    );
+  }
+
+  highlightRoute(routeId: string | null) {
+    this.highlightedShipRoute.set(
+      this.allShipRoutes().find((route) => route.routeId === routeId) || null
+    );
+  }
 }

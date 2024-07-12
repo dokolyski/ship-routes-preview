@@ -23,7 +23,18 @@
       "@marcura-test/ui-route-selection": [
         "src/ui-route-selection/src/index.ts"
       ],
-      "@marcura-test/ui-velocity-graph": ["src/ui-velocity-graph/src/index.ts"]
+      "@marcura-test/ui-ship-velocity-chart": [
+        "src/ui-ship-velocity-chart/src/index.ts"
+      ],
+      "@marcura-test/ui-timeline-chart-js": [
+        "src/ui-timeline-chart-js/src/index.ts"
+      ],
+      "@marcura-test/util-color": ["src/util-color/src/index.ts"],
+      "@marcura-test/util-forms": ["src/util-forms/src/index.ts"],
+      "@marcura-test/util-map-service-provider": [
+        "src/util-map-service-provider/src/index.ts"
+      ],
+      "@marcura-test/util-math": ["src/util-math/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

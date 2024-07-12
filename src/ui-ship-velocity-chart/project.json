@@ -1,0 +1,36 @@
+{
+  "name": "ui-ship-velocity-chart",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "src/ui-ship-velocity-chart/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "src/ui-ship-velocity-chart/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "src/ui-ship-velocity-chart/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "src/ui-ship-velocity-chart/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "src/ui-ship-velocity-chart/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

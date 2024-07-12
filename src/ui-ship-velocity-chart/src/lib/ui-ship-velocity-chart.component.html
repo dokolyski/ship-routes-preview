@@ -1,0 +1,9 @@
+<mat-card style="padding: 1rem; width: 650px; height: 350px">
+  <lib-ui-line-chart-js
+    [timelineChartData]="{
+      label: routeData().from + ' -> ' + routeData().to,
+      yLabel: 'Velocity (Knots)',
+      points: timelineChartData()
+    }"
+  ></lib-ui-line-chart-js>
+</mat-card>

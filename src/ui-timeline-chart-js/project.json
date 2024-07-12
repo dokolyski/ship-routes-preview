@@ -1,0 +1,36 @@
+{
+  "name": "ui-timeline-chart-js",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "src/ui-timeline-chart-js/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "src/ui-timeline-chart-js/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "src/ui-timeline-chart-js/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "src/ui-timeline-chart-js/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "src/ui-timeline-chart-js/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

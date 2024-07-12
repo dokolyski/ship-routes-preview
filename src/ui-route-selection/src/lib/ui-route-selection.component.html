@@ -1,0 +1,20 @@
+<mat-card style="padding: 1rem" appearance="outlined">
+  <h2>Select the ship route</h2>
+
+  <mat-form-field style="width: 100%" appearance="outline" floatLabel="always">
+    <mat-label>Route, date & duration</mat-label>
+    <mat-select (selectionChange)="routeSelected.emit($event.value)">
+      @for (route of allRoutes(); track route) {
+      <mat-option
+        (mouseover)="routeHighlighted.emit(route.id)"
+        (mouseout)="routeHighlighted.emit(null)"
+        [value]="route.id"
+        style="padding-top: 0.5rem; padding-bottom: 0.5rem"
+        ><b>{{ route.from }} -> {{ route.to }}</b> <br />
+        {{ route.routeStartDate | date : 'short' }} <br />
+        {{ route.durationInMs | duration }}</mat-option
+      >
+      }
+    </mat-select>
+  </mat-form-field>
+</mat-card>

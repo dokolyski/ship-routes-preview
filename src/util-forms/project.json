@@ -1,0 +1,36 @@
+{
+  "name": "util-forms",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "src/util-forms/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "src/util-forms/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "src/util-forms/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "src/util-forms/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "src/util-forms/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

@@ -2,9 +2,9 @@ import { RawShipRoute } from './ship-route.raw-model';
 
 export interface ShipRoute {
   fromPort: string;
-  durationInMs: number;
+  durationInMs: string;
   points: ShipRoutePoint[];
-  routeId: number;
+  routeId: string;
   toPort: string;
 }
 

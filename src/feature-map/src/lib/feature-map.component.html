@@ -1,1 +1,17 @@
-<ui-map [shipRoute]="selectedShipRoute()"></ui-map>
+<marcura-ui-map
+  [selectedRoute]="selectedShipRoute()"
+  [highlightedRoute]="highlightedShipRoute()"
+/>
+<marcura-ui-route-selection
+  [allRoutes]="allShipRoutesSelectOption()"
+  style="position: fixed; z-index: 1000; top: 1rem; right: 1rem"
+  (routeSelected)="routeSelected($event)"
+  (routeHighlighted)="highlightRoute($event)"
+/>
+@if (shipRouteData()) {
+<marcura-ui-ship-velocity-chart
+  [routeData]="{from: selectedShipRoute()!.fromPort, to: selectedShipRoute()!.toPort}"
+  [shipVelocityData]="shipRouteData()!"
+  style="position: fixed; z-index: 1000; bottom: 1rem; left: 1rem"
+/>
+}
