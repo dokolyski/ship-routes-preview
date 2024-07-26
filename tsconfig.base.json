@@ -31,8 +31,8 @@
       ],
       "@ship-routes-preview/util-color": ["src/util-color/src/index.ts"],
       "@ship-routes-preview/util-forms": ["src/util-forms/src/index.ts"],
-      "@ship-routes-preview/util-map-service-provider": [
-        "src/util-map-service-provider/src/index.ts"
+      "@ship-routes-preview/util-map-service-adapter": [
+        "src/util-map-service-adapter/src/index.ts"
       ],
       "@ship-routes-preview/util-math": ["src/util-math/src/index.ts"]
     }

@@ -1,9 +1,9 @@
 import { createComponentFactory } from '@ngneat/spectator/jest';
 import { UiMapComponent } from './ui-map.component';
 import {
-  LeafletMapServiceProviderService,
-  MAP_SERVICE_PROVIDER,
-} from '@ship-routes-preview/util-map-service-provider';
+  LeafletMapServiceAdapter,
+  MAP_SERVICE_ADAPTER,
+} from '@ship-routes-preview/util-map-service-adapter';
 import { ShipRoute } from '@ship-routes-preview/data-access-ship-routes';
 
 const selectors = {
@@ -28,8 +28,8 @@ describe('UiMapComponent', () => {
     imports: [UiMapComponent],
     providers: [
       {
-        provide: MAP_SERVICE_PROVIDER,
-        useClass: LeafletMapServiceProviderService,
+        provide: MAP_SERVICE_ADAPTER,
+        useClass: LeafletMapServiceAdapter,
       },
     ],
   });

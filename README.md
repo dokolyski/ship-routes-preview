@@ -2,7 +2,7 @@
 
 Based on frontend dev test from here https://github.com/Marcura/frontend-developer-test/
 As you can see, the application make use of Nx workspace with standalone application approach.
-During the development, I focused mostly on decoupling business logic from the chart & map libraries using facade pattern.
+During the development, I focused mostly on decoupling business logic from the chart & map libraries using adapter pattern.
 Also, I introduced a split into ui / feature / data-access layers to achieve a clear architecture.
 Libraries are placed flatly in the src folder, but if there would be multiple separate domains in the app I'd group the libraries by domain first.
 Of course the nx monorepo requires more setup to take advantage of the full potential (like introducing scope & type boundaries, enforcing rules, etc.), but I skipped this part for the purpose of this test.

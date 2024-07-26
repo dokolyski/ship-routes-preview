@@ -9,7 +9,7 @@ export interface ColoredMapPoint extends MapPoint {
   color: string;
 }
 
-export interface MapServiceProvider {
+export interface MapServiceAdapter {
   initMap(elementId: string): void;
   showSingleColorRoute(
     route: MapPoint[],
@@ -24,6 +24,6 @@ export interface MapServiceProvider {
   destroyMap(): void;
 }
 
-export const MAP_SERVICE_PROVIDER = new InjectionToken<MapServiceProvider>(
-  'MAP_SERVICE_PROVIDER'
+export const MAP_SERVICE_ADAPTER = new InjectionToken<MapServiceAdapter>(
+  'MAP_SERVICE_ADAPTER'
 );

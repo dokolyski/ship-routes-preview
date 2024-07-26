@@ -1,9 +1,9 @@
 import { provideHttpClient } from '@angular/common/http';
 import { ApplicationConfig } from '@angular/core';
 import {
-  LeafletMapServiceProviderService,
-  MAP_SERVICE_PROVIDER,
-} from '@ship-routes-preview/util-map-service-provider';
+  LeafletMapServiceAdapter,
+  MAP_SERVICE_ADAPTER,
+} from '@ship-routes-preview/util-map-service-adapter';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 
@@ -12,8 +12,8 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideCharts(withDefaultRegisterables()),
     {
-      provide: MAP_SERVICE_PROVIDER,
-      useClass: LeafletMapServiceProviderService,
+      provide: MAP_SERVICE_ADAPTER,
+      useClass: LeafletMapServiceAdapter,
     },
     provideAnimationsAsync(),
   ],

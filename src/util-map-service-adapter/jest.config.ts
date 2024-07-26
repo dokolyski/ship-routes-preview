@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'util-map-service-provider',
+  displayName: 'util-map-service-adapter',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/src/util-map-service-provider',
+  coverageDirectory: '../../coverage/src/util-map-service-adapter',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

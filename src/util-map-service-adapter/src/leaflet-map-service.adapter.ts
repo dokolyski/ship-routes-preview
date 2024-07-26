@@ -3,11 +3,11 @@ import * as L from 'leaflet';
 import {
   ColoredMapPoint,
   MapPoint,
-  MapServiceProvider,
+  MapServiceAdapter,
 } from './map-service-provider.interface';
 
 @Injectable()
-export class LeafletMapServiceProviderService implements MapServiceProvider {
+export class LeafletMapServiceAdapter implements MapServiceAdapter {
   private _layers!: L.LayerGroup;
   private _map!: L.Map;
 

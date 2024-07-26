@@ -7,7 +7,7 @@ import {
   OnInit,
 } from '@angular/core';
 import { ShipRoute } from '@ship-routes-preview/data-access-ship-routes';
-import { MAP_SERVICE_PROVIDER } from '@ship-routes-preview/util-map-service-provider';
+import { MAP_SERVICE_ADAPTER } from '@ship-routes-preview/util-map-service-adapter';
 import { percentile } from '@ship-routes-preview/util-math';
 import {
   colorScaledValue,
@@ -23,7 +23,7 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UiMapComponent implements OnInit {
-  private readonly _mapServiceProvider = inject(MAP_SERVICE_PROVIDER);
+  private readonly _mapServiceProvider = inject(MAP_SERVICE_ADAPTER);
   private _highlightedRouteId?: number;
 
   @Input() set selectedRoute(selectedRoute: ShipRoute | null) {
