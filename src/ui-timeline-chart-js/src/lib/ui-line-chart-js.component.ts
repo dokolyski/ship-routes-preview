@@ -7,11 +7,11 @@ import {
 import { CommonModule } from '@angular/common';
 import { BaseChartDirective } from 'ng2-charts';
 import { Chart, ChartDataset, ChartOptions } from 'chart.js';
-import { percentile } from '@marcura-test/util-math';
+import { percentile } from '@ship-routes-preview/util-math';
 import {
   colorScaledValue,
   PERCENTILE_FOR_MAX_COLOR_VALUE,
-} from '@marcura-test/util-color';
+} from '@ship-routes-preview/util-color';
 import 'chartjs-adapter-date-fns';
 
 export interface TimelineChartData {

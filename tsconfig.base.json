@@ -15,26 +15,26 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@marcura-test/data-access-ship-routes": [
+      "@ship-routes-preview/data-access-ship-routes": [
         "src/data-access-ship-routes/src/index.ts"
       ],
-      "@marcura-test/feature-map": ["src/feature-map/src/index.ts"],
-      "@marcura-test/ui-map": ["src/ui-map/src/index.ts"],
-      "@marcura-test/ui-route-selection": [
+      "@ship-routes-preview/feature-map": ["src/feature-map/src/index.ts"],
+      "@ship-routes-preview/ui-map": ["src/ui-map/src/index.ts"],
+      "@ship-routes-preview/ui-route-selection": [
         "src/ui-route-selection/src/index.ts"
       ],
-      "@marcura-test/ui-ship-velocity-chart": [
+      "@ship-routes-preview/ui-ship-velocity-chart": [
         "src/ui-ship-velocity-chart/src/index.ts"
       ],
-      "@marcura-test/ui-timeline-chart-js": [
+      "@ship-routes-preview/ui-timeline-chart-js": [
         "src/ui-timeline-chart-js/src/index.ts"
       ],
-      "@marcura-test/util-color": ["src/util-color/src/index.ts"],
-      "@marcura-test/util-forms": ["src/util-forms/src/index.ts"],
-      "@marcura-test/util-map-service-provider": [
+      "@ship-routes-preview/util-color": ["src/util-color/src/index.ts"],
+      "@ship-routes-preview/util-forms": ["src/util-forms/src/index.ts"],
+      "@ship-routes-preview/util-map-service-provider": [
         "src/util-map-service-provider/src/index.ts"
       ],
-      "@marcura-test/util-math": ["src/util-math/src/index.ts"]
+      "@ship-routes-preview/util-math": ["src/util-math/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

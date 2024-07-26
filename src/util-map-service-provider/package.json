@@ -1,5 +1,5 @@
 {
-  "name": "@marcura-test/util-map-service-provider",
+  "name": "@ship-routes-preview/util-map-service-provider",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^18.0.0",

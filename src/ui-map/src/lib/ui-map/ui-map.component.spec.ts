@@ -3,8 +3,8 @@ import { UiMapComponent } from './ui-map.component';
 import {
   LeafletMapServiceProviderService,
   MAP_SERVICE_PROVIDER,
-} from '@marcura-test/util-map-service-provider';
-import { ShipRoute } from '@marcura-test/data-access-ship-routes';
+} from '@ship-routes-preview/util-map-service-provider';
+import { ShipRoute } from '@ship-routes-preview/data-access-ship-routes';
 
 const selectors = {
   map: '#map',

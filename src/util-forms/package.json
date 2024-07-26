@@ -1,5 +1,5 @@
 {
-  "name": "@marcura-test/util-forms",
+  "name": "@ship-routes-preview/util-forms",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^18.0.0",

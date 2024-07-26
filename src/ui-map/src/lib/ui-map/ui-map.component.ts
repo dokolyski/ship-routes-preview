@@ -6,16 +6,16 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
-import { ShipRoute } from '@marcura-test/data-access-ship-routes';
-import { MAP_SERVICE_PROVIDER } from '@marcura-test/util-map-service-provider';
-import { percentile } from '@marcura-test/util-math';
+import { ShipRoute } from '@ship-routes-preview/data-access-ship-routes';
+import { MAP_SERVICE_PROVIDER } from '@ship-routes-preview/util-map-service-provider';
+import { percentile } from '@ship-routes-preview/util-math';
 import {
   colorScaledValue,
   PERCENTILE_FOR_MAX_COLOR_VALUE,
-} from '@marcura-test/util-color';
+} from '@ship-routes-preview/util-color';
 
 @Component({
-  selector: 'marcura-ui-map',
+  selector: 'ship-routes-ui-map',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './ui-map.component.html',

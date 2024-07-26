@@ -1,13 +1,13 @@
 import { createComponentFactory, Spectator } from '@ngneat/spectator';
 import { FeatureMapComponent } from './feature-map.component';
 import { MockComponent } from 'ng-mocks';
-import { UiMapComponent } from '@marcura-test/ui-map';
-import { UiShipVelocityChartComponent } from '@marcura-test/ui-ship-velocity-chart';
+import { UiMapComponent } from '@ship-routes-preview/ui-map';
+import { UiShipVelocityChartComponent } from '@ship-routes-preview/ui-ship-velocity-chart';
 import { mockProvider } from '@ngneat/spectator/jest';
 import {
   ShipRoute,
   ShipRoutesApiService,
-} from '@marcura-test/data-access-ship-routes';
+} from '@ship-routes-preview/data-access-ship-routes';
 import { of } from 'rxjs';
 
 const ALL_SHIP_ROUTES_MOCK: ShipRoute[] = [

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FeatureMapComponent } from '@marcura-test/feature-map';
+import { FeatureMapComponent } from '@ship-routes-preview/feature-map';
 
 @Component({
   standalone: true,

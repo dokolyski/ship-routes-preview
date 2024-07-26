@@ -10,17 +10,17 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import {
   ShipRoute,
   ShipRoutesApiService,
-} from '@marcura-test/data-access-ship-routes';
-import { UiMapComponent } from '@marcura-test/ui-map';
-import { UiRouteSelectionComponent } from '@marcura-test/ui-route-selection';
+} from '@ship-routes-preview/data-access-ship-routes';
+import { UiMapComponent } from '@ship-routes-preview/ui-map';
+import { UiRouteSelectionComponent } from '@ship-routes-preview/ui-route-selection';
 import { shareReplay } from 'rxjs';
 import {
   ShipVelocityPoint,
   UiShipVelocityChartComponent,
-} from '@marcura-test/ui-ship-velocity-chart';
+} from '@ship-routes-preview/ui-ship-velocity-chart';
 
 @Component({
-  selector: 'marcura-feature-map',
+  selector: 'ship-routes-feature-map',
   standalone: true,
   templateUrl: './feature-map.component.html',
   styleUrl: './feature-map.component.scss',

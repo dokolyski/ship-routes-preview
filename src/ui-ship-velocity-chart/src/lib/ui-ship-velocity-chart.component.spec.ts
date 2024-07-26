@@ -1,6 +1,6 @@
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 import { UiShipVelocityChartComponent } from './ui-ship-velocity-chart.component';
-import { UiLineChartJsComponent } from '@marcura-test/ui-timeline-chart-js';
+import { UiLineChartJsComponent } from '@ship-routes-preview/ui-timeline-chart-js';
 import { MockComponents } from 'ng-mocks';
 
 describe('UiShipVelocityChartComponent', () => {

@@ -1,4 +1,4 @@
-# MarcuraTest
+# shipRoutesPreview
 
 ## Project Description
 
@@ -14,11 +14,11 @@ comes with a LSP for Vim users.
 
 ## Start the application
 
-Run `npx nx serve marcura-test` to start the development server. Happy coding!
+Run `npx nx serve ship-routes-preview` to start the development server. Happy coding!
 
 ## Build for production
 
-Run `npx nx build marcura-test` to build the application. The build artifacts are stored in the output directory (e.g. `dist/` or `build/`), ready to be deployed.
+Run `npx nx build ship-routes-preview` to build the application. The build artifacts are stored in the output directory (e.g. `dist/` or `build/`), ready to be deployed.
 
 ## Running tasks
 

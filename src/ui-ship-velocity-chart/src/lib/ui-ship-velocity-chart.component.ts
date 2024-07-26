@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
 import { MatCard } from '@angular/material/card';
-import { UiLineChartJsComponent } from '@marcura-test/ui-timeline-chart-js';
+import { UiLineChartJsComponent } from '@ship-routes-preview/ui-timeline-chart-js';
 
 export interface ShipVelocityPoint {
   timestamp: number;
@@ -14,7 +14,7 @@ export interface ShipVelocityPoint {
 }
 
 @Component({
-  selector: 'marcura-ui-ship-velocity-chart',
+  selector: 'ship-routes-ui-ship-velocity-chart',
   standalone: true,
   imports: [BaseChartDirective, MatCard, UiLineChartJsComponent],
   templateUrl: './ui-ship-velocity-chart.component.html',

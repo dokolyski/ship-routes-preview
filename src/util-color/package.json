@@ -1,5 +1,5 @@
 {
-  "name": "@marcura-test/util-color",
+  "name": "@ship-routes-preview/util-color",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^18.0.0",

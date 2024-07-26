@@ -1,5 +1,5 @@
 {
-  "name": "@marcura-test/util-math",
+  "name": "@ship-routes-preview/util-math",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^18.0.0",

@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'marcura-test',
+  displayName: 'ship-routes-preview',
   preset: './jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: './coverage/marcura-test',
+  coverageDirectory: './coverage/ship-routes-preview',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

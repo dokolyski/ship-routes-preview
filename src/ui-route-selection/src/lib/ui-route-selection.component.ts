@@ -13,7 +13,7 @@ import { MatOption, MatSelect } from '@angular/material/select';
 import { DurationPipe } from './duration-pipe/duration.pipe';
 
 @Component({
-  selector: 'marcura-ui-route-selection',
+  selector: 'ship-routes-ui-route-selection',
   standalone: true,
   imports: [
     CommonModule,
